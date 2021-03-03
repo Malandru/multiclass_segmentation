@@ -31,6 +31,9 @@ class Inference:
         if len(model_path) == 0:
             self.model = keras.models.load_model(model_path)
 
+    def save_model(self, filename):
+        self.model.save(filename)
+
     def set_train_params(self, x, y):
         self.x_train = x
         self.y_train = y
