@@ -16,7 +16,7 @@ class Inference:
         self.config = config
 
     def create_model(self):
-        optimizer = keras.optimizers.Adam(self.config.LR)
+        optimizer = 'Adam'
         class_weights = np.random.uniform(1, 100, len(self.config.class_names))
 
         dice_loss = sm.losses.DiceLoss(class_weights=class_weights)
