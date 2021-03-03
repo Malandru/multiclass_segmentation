@@ -6,6 +6,8 @@ def prepare_figure(**images):
     n = len(images)
     plt.figure()
     for i, (name, image) in enumerate(images.items()):
+        if image.shape[2] < 3:
+            image = image.squeeze()
         plt.subplot(1, n, i + 1)
         plt.xticks([])
         plt.yticks([])
