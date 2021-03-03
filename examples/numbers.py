@@ -28,6 +28,7 @@ class NumClass:
         inference.create_model()
         inference.set_train_params(x_train, y_train)
         inference.train()
+        inference.save_model('numbers.h5')
 
         inference.test_predictions(x_test, y_test)
 
