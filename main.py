@@ -5,7 +5,6 @@ import visualize
 def main():
     num_class = NumClass()
     num_class.visualize_dataset()
-    visualize.show_prepared_figures()
     num_class.run()
 
 
